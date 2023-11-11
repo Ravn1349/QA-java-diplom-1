@@ -11,6 +11,8 @@ import org.mockito.junit.MockitoJUnitRunner;
 import java.util.Random;
 
 import static org.junit.Assert.*;
+import static praktikum.BunParameterizedTest.DELTA;
+
 @RunWith(MockitoJUnitRunner.class)
 public class BurgerTest {
     private static Faker faker = new Faker();
@@ -68,7 +70,7 @@ public class BurgerTest {
 
         float actual = burger.getPrice();
         float expected = 520.0f;
-        assertEquals(expected, actual, 0);
+        assertEquals(expected, actual, DELTA);
     }
 
     @Test
